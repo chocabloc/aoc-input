@@ -26,7 +26,7 @@ def get_input(**kwargs):
     s.cookies.set('session', cookie, domain='.adventofcode.com')
 
     # make request
-    r = s.get('https://adventofcode.com/' + year + '/day/' + day + '/input')
+    r = s.get('https://adventofcode.com/' + str(year) + '/day/' + str(day) + '/input')
     if r.status_code != 200:
         if r.status_code == 500:
             print('error: there was a server error. maybe your session cookie is wrong? (500)')
